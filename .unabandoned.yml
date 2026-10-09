@@ -1,0 +1,28 @@
+schema: 1
+
+package: "@unabandoned/bootstrap-colorpicker"
+
+upstream:
+  repo: itsjavi/bootstrap-colorpicker
+  reason: "no release since 3.4.0 in 2021; the repository is archived and the npm package is deprecated"
+
+summary: >-
+  Modular colour picker jQuery plugin for Bootstrap 4, shipped as a prebuilt
+  UMD bundle and stylesheet.
+
+why-forked: >-
+  CyberChef ships it at runtime, and it was abandoned while declaring bootstrap,
+  jquery and popper.js as its own runtime dependencies and bundling the color
+  3.x library from 2019. The fork takes those three as peer dependencies so it
+  uses the consumer's copies, has zero runtime dependencies, and rebuilds its
+  dist with esbuild and sass against a current, Renovate-tracked color.
+
+used-by:
+  - consumer: TheTechNetwork/CyberChef
+    purpose: >-
+      the inline RGBA colour picker the Parse colour code operation renders,
+      reporting each change back to the input through colorpickerChange
+
+status: active
+
+tags: [ui, jquery-plugin, bootstrap, colorpicker]

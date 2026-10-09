@@ -172,7 +172,17 @@ class ColorItem {
     }
 
     try {
-      return QixColor(color, format);
+      let qColor = QixColor(color, format);
+
+      // color-string 1.x (what this package bundled up to 3.4.0) rounded the
+      // alpha of #rgba / #rrggbbaa input to two decimals; color-string 2 keeps
+      // the exact ratio (0x80 -> 0.5019...). Keep the rounded value so string
+      // output stays the same, e.g. '#00ff0080' -> 'rgba(0, 255, 0, 0.5)'.
+      if (typeof color === 'string' && /^#([0-9a-f]{4}|[0-9a-f]{8})$/i.test(color)) {
+        qColor = qColor.alpha(Math.round(qColor.alpha() * 100) / 100);
+      }
+
+      return qColor;
     } catch (e) {
       return null;
     }
@@ -588,7 +598,13 @@ class ColorItem {
    * @returns {boolean}
    */
   isDark() {
-    return this._color.isDark();
+    // The YIQ weights color 3.x used. color 4+ switched to Rec. 709 luma
+    // weights, which flips the answer near the threshold and with it the
+    // preview text colour, so keep the original equation.
+    let rgb = this._color.rgb().array();
+    let yiq = (rgb[0] * 299 + rgb[1] * 587 + rgb[2] * 114) / 1000;
+
+    return yiq < 128;
   }
 
   /**
@@ -598,7 +614,7 @@ class ColorItem {
    * @returns {boolean}
    */
   isLight() {
-    return this._color.isLight();
+    return !this.isDark();
   }
 
   /**

@@ -34,7 +34,7 @@ $.fn[plugin] = function (option) {
       if (option === 'colorpicker') {
         // Return colorpicker instance: e.g. .colorpicker('colorpicker')
         returnValue = inst;
-      } else if ($.isFunction(inst[option])) {
+      } else if (typeof inst[option] === 'function') {
         // Return method call return value: e.g. .colorpicker('isEnabled')
         returnValue = inst[option].apply(inst, fnArgs);
       } else {

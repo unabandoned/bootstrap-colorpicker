@@ -1,35 +1,36 @@
-<!--<a class="readme-logo" href="https://itsjavi.com/bootstrap-colorpicker">
-    <img alt="Logo by @reallinfo" src="logo.png" width="128px" />
-</a>-->
-
 # Bootstrap Colorpicker
 
-<!--version-->
+[Bootstrap Colorpicker](https://github.com/unabandoned/bootstrap-colorpicker/) is a modular color picker plugin for Bootstrap 4.
 
-[Bootstrap Colorpicker](https://github.com/itsjavi/bootstrap-colorpicker/) is a modular color picker plugin for Bootstrap 4.
+[![npm](https://img.shields.io/npm/v/@unabandoned/bootstrap-colorpicker.svg?style=flat-square)](https://www.npmjs.com/package/@unabandoned/bootstrap-colorpicker)
 
-[![Build Status](https://img.shields.io/travis/itsjavi/bootstrap-colorpicker/master.svg?style=flat-square)](https://travis-ci.org/itsjavi/bootstrap-colorpicker)
-[![npm](https://img.shields.io/npm/v/bootstrap-colorpicker.svg?style=flat-square)](https://www.npmjs.com/package/bootstrap-colorpicker)
-
-
-> THIS PROJECT IS NOT MAINTAINED ANYMORE.
-> After almost 10 years, it won't receive any further update. I recommend you using more modern solutions like [React Color](https://casesandberg.github.io/react-color/). You are still free to adapt this project and create forks and variants of it.
-
-
+> This is the maintained fork of [itsjavi/bootstrap-colorpicker](https://github.com/itsjavi/bootstrap-colorpicker),
+> which was archived after 3.4.0 and whose `bootstrap-colorpicker` npm package is deprecated.
+> It is published as `@unabandoned/bootstrap-colorpicker` by the
+> [unabandoned](https://github.com/unabandoned) organization. The plugin API, the options and the
+> `dist/` file paths are unchanged from 3.4.0.
 
 ## Install
-You can get the latest version in many different ways:
 
-- Downloading the tarball from npm the registry: https://registry.npmjs.org/bootstrap-colorpicker/-/bootstrap-colorpicker-3.4.0.tgz  (you can change the version in the url to any released tag)
-- Cloning using Git: `git clone https://github.com/itsjavi/bootstrap-colorpicker.git`
-- Installing via NPM: `npm install bootstrap-colorpicker`
-- Installing via Yarn: `yarn add bootstrap-colorpicker`
-- Installing via Composer: `composer require itsjavi/bootstrap-colorpicker`
+```sh
+npm install @unabandoned/bootstrap-colorpicker
+```
 
-Note that the `dist` files are only distributed via the NPM and Yarn installations.
+To keep existing `import "bootstrap-colorpicker"` statements and
+`bootstrap-colorpicker/dist/...` paths working unchanged, install it under the original name:
 
-For the rest methods, you will need to generate the files initializing the project with `yarn install`
-and then building the code using `npm run build`.
+```sh
+npm install bootstrap-colorpicker@npm:@unabandoned/bootstrap-colorpicker
+```
+
+`jquery` (>= 2.2) and `bootstrap` (>= 4.0) are peer dependencies, so the plugin uses your
+application's copies; `popper.js` (>= 1.10) is an optional peer, needed only by Bootstrap 4's
+popover. The package has no runtime dependencies of its own: the `color` library is bundled
+into `dist/js`.
+
+The `dist` files are only distributed via npm. From a clone, run `npm install` and then
+`npm run build` (esbuild for the UMD bundle, sass for the stylesheet) to generate them, and
+`npm test` to run the test suite.
 
 ## Versions
 
@@ -144,18 +145,16 @@ you will usually need to set inline to `true` and a `container` selector option.
 ```
 
 ## Contributions
-* [Issues](https://github.com/itsjavi/bootstrap-colorpicker/issues)
-* [Pull Requests](https://github.com/itsjavi/bootstrap-colorpicker/pulls)
-* [Milestones](https://github.com/itsjavi/bootstrap-colorpicker/milestones)
+* [Issues](https://github.com/unabandoned/bootstrap-colorpicker/issues)
+* [Pull Requests](https://github.com/unabandoned/bootstrap-colorpicker/pulls)
 
-This project exists thanks to all the [people who contribute](https://github.com/itsjavi/bootstrap-colorpicker/graphs/contributors).
+This project exists thanks to all the [people who contributed](https://github.com/itsjavi/bootstrap-colorpicker/graphs/contributors) upstream.
 
-Please read [CONTRIBUTING](https://github.com/itsjavi/bootstrap-colorpicker/blob/master/.github/CONTRIBUTING.md) 
-before sending a pull request or issue.
+Commits follow [Conventional Commits](https://www.conventionalcommits.org/); see [security.md](security.md) for reporting vulnerabilities.
 
 ## License
 The MIT License (MIT).
-Please see the [License File](https://github.com/itsjavi/bootstrap-colorpicker/blob/master/LICENSE) for more information.
+Please see the [License File](LICENSE) for more information.
 
 ## Credits
 
