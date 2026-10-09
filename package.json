@@ -1,6 +1,6 @@
 {
   "name": "@unabandoned/bootstrap-colorpicker",
-  "version": "3.4.0",
+  "version": "3.5.0",
   "description": "Bootstrap Colorpicker is a modular color picker plugin for Bootstrap 4.",
   "main": "./dist/js/bootstrap-colorpicker.js",
   "style": "./dist/css/bootstrap-colorpicker.css",
