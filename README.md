@@ -24,9 +24,15 @@ npm install bootstrap-colorpicker@npm:@unabandoned/bootstrap-colorpicker
 ```
 
 `jquery` (>= 2.2) and `bootstrap` (>= 4.0) are peer dependencies, so the plugin uses your
-application's copies; `popper.js` (>= 1.10) is an optional peer, needed only by Bootstrap 4's
-popover. The package has no runtime dependencies of its own: the `color` library is bundled
-into `dist/js`.
+application's copies; `popper.js` is an optional peer, needed only by Bootstrap 4's popover.
+It is declared as the org's maintained v1 fork, so install popper.js under that alias:
+
+```sh
+npm install popper.js@npm:@unabandoned/popper.js@^1.16.2
+```
+
+The package has no runtime dependencies of its own: the `color` library is bundled into
+`dist/js`.
 
 The `dist` files are only distributed via npm. From a clone, run `npm install` and then
 `npm run build` (esbuild for the UMD bundle, sass for the stylesheet) to generate them, and

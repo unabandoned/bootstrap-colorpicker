@@ -31,7 +31,7 @@
   "peerDependencies": {
     "bootstrap": ">=4.0",
     "jquery": ">=2.2",
-    "popper.js": ">=1.10"
+    "popper.js": "npm:@unabandoned/popper.js@^1.16.2"
   },
   "peerDependenciesMeta": {
     "popper.js": {
