@@ -1,5 +1,16 @@
 # Changelog
 
+## [4.0.0](https://github.com/unabandoned/bootstrap-colorpicker/compare/bootstrap-colorpicker-v3.5.0...bootstrap-colorpicker-v4.0.0) (2026-11-08)
+
+
+### ⚠ BREAKING CHANGES
+
+* **deps:** take the optional popper.js peer from @unabandoned/popper.js ([#9](https://github.com/unabandoned/bootstrap-colorpicker/issues/9))
+
+### Bug Fixes
+
+* **deps:** take the optional popper.js peer from @unabandoned/popper.js ([#9](https://github.com/unabandoned/bootstrap-colorpicker/issues/9)) ([7433297](https://github.com/unabandoned/bootstrap-colorpicker/commit/74332972970165966f959f8578dd7e7c6f3df9bd))
+
 ## [3.5.0](https://github.com/unabandoned/bootstrap-colorpicker/compare/bootstrap-colorpicker-v3.4.0...bootstrap-colorpicker-v3.5.0) (2026-10-09)
 
 
