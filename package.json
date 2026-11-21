@@ -44,7 +44,7 @@
     "color": "5.0.3",
     "esbuild": "0.28.2",
     "jquery": "4.1.0",
-    "jquery3": "npm:jquery@4.0.0",
+    "jquery3": "npm:jquery@4.1.0",
     "jsdom": "31.0.1",
     "sass": "1.108.2"
   },
